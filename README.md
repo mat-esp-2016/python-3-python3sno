@@ -62,14 +62,14 @@ para salvar seu trabalho.
    descrever o que você quis fazer com cada bloco de código.
 3. Fazer e testar uma função que recebe como entrada um array de anos e um de
    meses e retorna um array de anos decimais.
-4. Fazer e testar uma função recebe como entrada uma matriz (array 2d) de dados
-   de temperaturas e retorna os anos decimais, a anomalia anual, anomalia de 10
-   anos e sua respectiva incerteza.
+4. Fazer e testar uma função que recebe como entrada uma matriz (array 2d) de
+   dados de temperaturas e retorna os anos decimais, a anomalia anual, anomalia
+   de 10 anos e sua respectiva incerteza.
 5. Use as funções criadas acima para repetir a tarefa da prática
    [Python 2](https://github.com/mat-esp/python-2).
 
 
-**BÔNUS**: Fazer e testar uma função recebe como entrada o nome de um
+**BÔNUS**: Fazer e testar uma função que recebe como entrada o nome de um
 arquivo de dados, o nome de uma pasta e o formato da figura (ex: `png`, `pdf`,
 `svg`) e retorna o nome da respectiva figura
 trocando o `.txt` pela extensão e adicionando o nome da pasta.
