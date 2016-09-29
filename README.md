@@ -1,104 +1,107 @@
-# Funções e programação defensiva
+# Python 3: Funções e programação defensiva
 
 Parte do curso
-[Matemática Especial I](http://www.leouieda.com/matematica-especial/)
+[Matemática Especial I](https://github.com/mat-esp/about)
 da [UERJ](http://www.uerj.br/).
 
 Ministrado por [Leonardo Uieda](http://www.leouieda.com/).
 
+
 ## Objetivos
 
-* Aprender a utilizar funções para manejar seu código
-* Desenvolver técnicas para produzir código mais correto
+* Aprender como fazer suas próprias funções.
+* Observar como criar funções ajuda a manejar um código complexo e evitar
+  repetição.
+* Aprender como usar funções torna possível testar seu código por partes.
+* Entender as técnicas de programação defensiva para evitar erros.
+
 
 ## Leitura recomendada
 
-* Lição de funções do [Software Carpentry](http://software-carpentry.org/)
-  (versão 4)
-* Lição de programação defensiva do Software Carpentry
-  :http://swcarpentry.github.io/python-novice-inflammation/08-defensive.html
-* http://www.scipy-lectures.org/intro/language/functions.html
+Vamos seguir de perto o material
+[Programming with Python](http://swcarpentry.github.io/python-novice-inflammation/)
+(ver as aulas "Creating Functions" e "Defensive Programming")
+e
+[Plotting and programming in Python](http://swcarpentry.github.io/python-novice-gapminder/)
+do Software Carpentry.
+Farei algumas modificações para ser mais voltado para o tipo de dados que
+costumamos encontrar nas geociências.
 
-## Preparação
+Uma ótima referência para aprender a usar o numpy e matplotlib é o
+[Scipy Lectures](http://www.scipy-lectures.org/).
 
-Utilize o link enviado por e-mail para criar um repositório para seu grupo.
-Cada membro do grupo deve clicar no link e selecionar o nome do grupo criado na
-prática passada.
-Não se esqueça de sair de sua conta **no github.com e no
-classroom.github.com**.
 
-**Crie um arquivo** chamado `alunos.txt` com os **nomes completos** de todos os
-integrantes do grupo. Inclua também a **qual turma** pertencem.
+## Tarefa
 
-As tarefas para serem feitas estão em um [Jupyter
-notebook](http://jupyter.org/).
-Para utilizar o Jupyter, você precisa iniciar um servidor de notebook
-no seu computador.
-Abra o bash e digite:
+Utilize o link enviado para a [lista de
+emails](https://github.com/mat-esp/about#informa%C3%A7%C3%B5es) para criar um
+repositório para seu grupo ou se juntar a um grupo já criado.
+Anote o link para o repositório criado para seu grupo. Vocês precisarão desse
+link.
 
-    $ jupyter notebook
+Clone o repositório do seu grupo para seu computador. Não se esqueça de
+configurar o git para um dos membros do grupo (`git config --global user.name
+"Fulado de Tal"` e `git config --global user.email fulado@gmail.com`).
 
-Espere um pouco até aparecer algo como:
+Essa prática continua com os mesmo dados de temperatura que utilizamos na
+prática [Python 2](https://github.com/mat-esp/python-2).
 
-    [I 10:50:47.370 NotebookApp] Serving notebooks from local directory: /home/leo
-    [I 10:50:47.370 NotebookApp] 0 active kernels
-    [I 10:50:47.370 NotebookApp] The IPython Notebook is running at: http://localhost:8888/
-    [I 10:50:47.370 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+**IMPORTANTE**: tenha em mente o [checklist de
+correção](https://github.com/mat-esp/about/blob/master/ISSUE_TEMPLATE.md#checklist-de-avalia%C3%A7%C3%A3o-do-professor)
+quando fizer a tarefa. Não perca pontos de bobeira.
+O site [pep8.org](http://pep8.org/) é uma boa referência para como escrever
+código Python bem formatado.
 
-Isso deve abrir o seu navegador padrão também em uma página no endereço
-[http://127.0.0.1:8888](http://127.0.0.1:8888).
-Essa página irá te mostrar as pastas que estão em seu computador
-(a partir da pasta onde você rodou `$ jupyter notebook`).
+Siga as instruções abaixo. Não se esqueça de fazer os commits e roda `git push`
+para salvar seu trabalho.
 
-## Tarefas
+1. Adicione no repositório um arquivo `alunos.txt` com os nomes completos de
+   cada membro do grupo e seus nomes de usuário no github.com
+2. Crie um Jupyter notebook chamado `python3.ipynb`. Todos os passos abaixo
+   devem ser feitos nesse notebook. Use as células de texto do notebook para
+   descrever o que você quis fazer com cada bloco de código.
+3. Fazer e testar uma função que recebe como entrada um array de anos e um de
+   meses e retorna um array de anos decimais.
+4. Fazer e testar uma função recebe como entrada uma matriz (array 2d) de dados
+   de temperaturas e retorna os anos decimais, a anomalia anual, anomalia de 10
+   anos e sua respectiva incerteza.
+5. Use as funções criadas acima para repetir a tarefa da prática
+   [Python 2](https://github.com/mat-esp/python-2).
 
-Siga as instruções em no notebook disponibilizado no repositório.
-As tarefas e **suas soluções devem estar contidas nesse notebook**.
-Por isso, faça commits de suas mudanças ao notebook.
 
-**AVISO**: Não esqueça de verificar se abriu o notebook no clone correto!
+**BÔNUS**: Fazer e testar uma função recebe como entrada o nome de um
+arquivo de dados, o nome de uma pasta e o formato da figura (ex: `png`, `pdf`,
+`svg`) e retorna o nome da respectiva figura
+trocando o `.txt` pela extensão e adicionando o nome da pasta.
+Exemplo: dado como entrada `'dados/0.80S-49.02W-TAVG-Trend.txt'`, formato `png`
+e pasta `figuras`, a função deve retornar
+`'figuras/0.80S-49.02W-TAVG-Trend.png'`.
 
-**AVISO 2**: Após cada mudança, `git add` + `git commit` + `git push`.
 
-**AVISO 3**: ANTES de começar: `git pull origin master`
+## Entrega das soluções
 
-## Dicas
+A solução de cada prática será um repositório no [Github](http://github.com/)
+com o código feito pelos alunos.
 
-* Façam muitos **commits**. Quanto mais melhor.
-* Não se esqueça do **push**.
-* Utilize **mensagens de commit** descritivas. "Completei a tarefa 1" é melhor que
-  "mudança".
-* Escolha nomes descritivos para **variáveis**. "temperatura" é melhor que "a".
-* **Descreva o que (e por que) você fez** em comentários e células de texto.
-  Isso será muito útil quando você voltar a essa tarefa depois.
-* Preste atenção aos **detalhes**. Leia as instruções com atenção.
+A entrega das soluções será feita criando uma
+[Issue](https://guides.github.com/features/issues/)
+no repositório da disciplina
+[mat-esp/about](https://github.com/mat-esp/about).
+Utilize o link abaixo para ir direto para as Issues:
 
-## Checklist da avaliação
+https://github.com/mat-esp/about/issues
 
-Utilizaremos a lista abaixo para avaliar a sua solução. Cada item poderá
-receber a nota "total" se atender perfeitamente ao critério, "parcial" (metade
-da nota) se atender parcialmente ao critério, ou "zero" se falhar ao critério.
-Note que a nota máxima (incluindo a bônus) é 10.
+Cada grupo deve criar uma Issue para entregar cada prática.
+A issue deverá seguir o padrão abaixo:
 
-    - [] Mensagens de commit que explicam claramente a mudança que foi feita
-      [total|parcial|zero] 0.5 pt
-    - [] Formatação do código apropriada.
-      Ex: `espacamento = (maximo - minimo)/(N - 1)`,
-      `indices = range(0, N, 1)`, `dado = dados[i + 1]` == BOM.
-      `espacamento=(maximo-minimo)/ (N-1)`, `indices=range (0,N,1)`,
-      `dado= dados [i+ 1]` == RUIM [total|parcial|zero] 0.5 pt
-    - [] Utilizar variáveis ao invés de colocar número "na mão".
-      Ex: `for i in range(0, N):`, `A[k][N - 1]` == BOM.
-      `for i in range(0, 39):`, `A[k][47]` == RUIM. [total|parcial|zero] 1 pt
-    - [] Código com comentários que explicam "por que" algo foi feito, não só
-      "o que" foi feito [total|parcial|zero] 1 pt
-    - [] Nomes de variáveis descritivos. Ex: `temperatura`, `media_por_hora`,
-      `linha`, `somatorio` == bom. `a`, `var`, `meh`, `lista` == ruim.
-      [total|parcial|zero] 2 pt
-    - [] Código produz a solução correta (**exatamente** como deveria ser
-      impresso) [total|parcial|zero] 5 pt
-    - [] Tarefa bônus [total|parcial|zero] 1 pt extra (não será considerado
-      caso a nota já seja 10)
+* Título: Deve conter o nome da prática seguido dos nomes dos integrantes do
+  grupo e a qual turma pertencem (caso haja mais de uma). Ex: "Prática
+  Integração: Bilbo, John, Arthur - Turma 1"
+* Corpo: Deve conter o link para o repositório do grupo (ex:
+  `https://github.com/mat-esp-2016/integracao-sociedade-42`) e qualquer
+  comentário que achar necessário (ex: problemas com os commits, erros que foram
+  arrumados depois, dificuldades, etc).
+
 
 ## License
 
